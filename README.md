@@ -5,12 +5,13 @@ Some stack
 * React 16
 * React Router 4
 * Webpack 4
-* Express
+* Express 4
+* Babel 7
 
 Support features
 ---
-* SSR
-* PWA
+* SSR (done)
+* PWA (in progress..)
 * SASS (soon ..)
 ---
 
