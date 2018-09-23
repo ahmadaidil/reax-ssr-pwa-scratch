@@ -1,27 +1,26 @@
-const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
+const baseConfig =  require('./webpack.base');
 
 const port = process.env.PORT || 8000;
-const serverPort = process.env.SERVER_PORT || 8001;
+const devPort = process.env.DEV_PORT || 8080;
 
-module.exports = {
+const devConfig = {
   mode: 'development',
-  context: path.resolve(__dirname, '../src/client'),
-  target: 'web',
   entry: [
     'react-hot-loader/patch',
-    `webpack-dev-server/client?http://localhost:${port}`,
+    `webpack-dev-server/client?http://localhost:${devPort}`,
     'webpack/hot/only-dev-server',
     './index.js'
   ],
   devServer: {
     proxy: {
       '**': {
-        target: `http://localhost:${serverPort}`,
+        target: `http://localhost:${port}`,
         secure: false
       }
     },
-    port,
+    port: devPort,
     inline: true,
     historyApiFallback: true,
     hot: true,
@@ -31,17 +30,9 @@ module.exports = {
     path: __dirname + '../public',
     filename: 'assets/reax.js'
   },
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        include: path.resolve(__dirname, '../src/client'),
-        loader: 'babel-loader',
-        exclude: '/node_modules/'
-      }
-    ]
-  },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ]
 };
+
+module.exports = merge(baseConfig, devConfig);
