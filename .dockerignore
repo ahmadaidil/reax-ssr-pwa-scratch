@@ -3,3 +3,6 @@ public
 dist
 yarn-error.log
 yarn.lock
+.git
+.gitignore
+.eslintrc
