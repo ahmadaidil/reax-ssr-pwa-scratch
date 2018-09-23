@@ -15,6 +15,11 @@ Support features
 * SASS (soon ..)
 ---
 
+*Eslint*
+* *Custom*, based my preference code style and still looking for the best config
+
+---
+
 Install dep
 ```terminal
 $ npm i
