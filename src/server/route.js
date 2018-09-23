@@ -15,7 +15,10 @@ router.get('*', (req, res) => {
       {renderRoutes(routes)}
     </StaticRouter>
   );
-  res.render('index', { reax });
+  res.render('index', {
+    title: 'Reax || © 2018 Ahmad Aidil',
+    reax
+  });
 });
 
 module.exports = router;

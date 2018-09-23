@@ -31,7 +31,7 @@ const config = {
       inject: false,
       template: path.join(__dirname, '../src/server/', 'views', 'index.pug'),
       templateParameters: {
-        title: 'Reax || &copy; 2018 Ahmad Aidil'
+        title: 'Reax || © 2018 Ahmad Aidil'
       },
     })
   ]
