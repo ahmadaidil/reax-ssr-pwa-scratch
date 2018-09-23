@@ -14,17 +14,6 @@
     "build": "NODE_ENV=production webpack && rm -rf dist/ && babel src/ -d dist/ && cp -a src/server/views dist/server/"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.16.3",
-    "pug": "^2.0.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router": "^4.3.1",
-    "react-router-config": "^1.0.0-beta.4",
-    "react-router-dom": "^4.3.1"
-  },
-  "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/node": "^7.0.0",
@@ -32,15 +21,26 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
-    "concurrently": "^4.0.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
     "html-webpack-plugin": "^3.2.0",
-    "nodemon": "^1.18.4",
+    "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
-    "react-hot-loader": "^4.3.11",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.3.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8",
     "webpack-merge": "^4.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.4",
+    "react-hot-loader": "^4.3.11"
   }
 }
