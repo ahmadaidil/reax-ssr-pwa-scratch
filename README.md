@@ -38,6 +38,12 @@ $ yarn start:prod
 ```
 
 ---
+Docker production build
+```terminal
+$ docker build -t <your-image-name> .
+```
+
+---
 ENV Variable
 * **PORT**: for production and server port
 * **DEV_PORT**: for development port
