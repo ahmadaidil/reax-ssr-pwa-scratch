@@ -1,10 +1,10 @@
 const path = require('path');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const baseConfig = require('./webpack.base');
 
-const config = {
+const prodConfig = {
   mode: 'production',
   entry: [
     './index.js'
@@ -32,9 +32,9 @@ const config = {
       template: path.join(__dirname, '../src/server/', 'views', 'index.pug'),
       templateParameters: {
         title: 'Reax || © 2018 Ahmad Aidil'
-      },
+      }
     })
   ]
 };
 
-module.exports = merge(baseConfig, config);
+module.exports = merge(baseConfig, prodConfig);
