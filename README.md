@@ -1,22 +1,23 @@
 # React SSR & PWA build from scratch
 
-Some stack
----
-* React 16
-* React Router 4
-* Webpack 4
-* Express 4
-* Babel 7
+## Some stack and credit
+* [React 16](https://github.com/facebook/react)
+* [React Router 4](https://github.com/ReactTraining/react-router)
+* [Webpack 4](https://github.com/webpack/webpack)
+* [Express 4](https://github.com/expressjs/express)
+* [Babel 7](https://github.com/babel/babel)
+* [react-helmet-async](https://github.com/staylor/react-helmet-async)
 
-Support features
----
-* SSR (done)
-* PWA (in progress..)
-* SASS (soon ..)
+## Support features
+- [x] SSR
+- [x] SEO
+- [ ] PWA
+- [ ] SASS
+- [ ] [Loaders](https://webpack.js.org/loaders/)
 ---
 
 *Eslint*
-* *Custom*, based my preference code style and still looking for the best config
+* *Custom*, based on my preference code style and still looking for the best config
 
 ---
 
