@@ -1,9 +1,17 @@
 import { withRouter } from 'react-router-dom';
-import Homepage from './client/pages/home';
+import { Universal, Home, NotFound } from './client/pages';
 
 export default [
   {
     path: '/',
-    component: withRouter(Homepage)
+    component: withRouter(Home),
+    exact: true
+  },
+  {
+    path: '/404',
+    component: NotFound
+  },
+  {
+    component: Universal
   }
 ];
