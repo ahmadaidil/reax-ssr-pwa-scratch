@@ -1,7 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.base');
 
 const prodConfig = {
@@ -15,26 +14,9 @@ const prodConfig = {
     publicPath: '/assets/'
   },
   devtool: false,
-  module: {
-    rules: [
-      {
-        test: /\.pug$/,
-        loader: 'pug-loader'
-      }
-    ]
-  },
   optimization: {
     minimizer: [new UglifyJsPlugin()]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: path.join(__dirname, '../src/server/', 'views', 'index.pug'),
-      templateParameters: {
-        title: 'Reax || © 2018 Ahmad Aidil'
-      }
-    })
-  ]
+  }
 };
 
 module.exports = merge(baseConfig, prodConfig);
