@@ -10,7 +10,7 @@ const setGlobalScope = (scope) => {
 };
 
 setGlobalScope('window');
-const route = require('./route');
+const universalRoute = require('./universal-route');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(bodyParser.json());
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../..', 'public')));
 }
 
-app.use('/', route);
+app.use('/', universalRoute);
 
 app.listen(port, (error) => {
   error
