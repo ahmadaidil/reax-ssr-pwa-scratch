@@ -2,11 +2,14 @@ import React from 'react';
 import { hydrate } from 'react-dom';
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { renderRoutes } from 'react-router-config';
+import { HelmetProvider } from 'react-helmet-async';
 import routes from '../routes';
 
 hydrate(
   <BrowserRouter>
-    {renderRoutes(routes)}
+    <HelmetProvider>
+      {renderRoutes(routes)}
+    </HelmetProvider>
   </BrowserRouter>,
   document.getElementById('reax')
 );
