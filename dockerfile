@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:8-alpine
 EXPOSE 8000
 ENV NODE_ENV production
 ENV PORT 8000
