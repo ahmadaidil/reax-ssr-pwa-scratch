@@ -2,6 +2,7 @@
   "presets": ["@babel/env", "@babel/react"],
   "plugins": [
     "@babel/proposal-class-properties",
+    "@babel/transform-react-constant-elements",
     ["inline-import-data-uri", {
       "extensions": [
         ".png",
