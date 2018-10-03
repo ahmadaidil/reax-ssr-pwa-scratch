@@ -1,3 +1,17 @@
 html, body {
   margin: 0;
 }
+
+header,
+main,
+footer {
+  text-align: center;
+}
+
+header img {
+  margin-bottom: 1.2rem;
+}
+
+main {
+  margin-top: 1.5rem;
+}
