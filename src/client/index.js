@@ -4,6 +4,7 @@ import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { renderRoutes } from 'react-router-config';
 import { HelmetProvider } from 'react-helmet-async';
 import routes from '../routes';
+import './styles/main.css';
 
 hydrate(
   <BrowserRouter>

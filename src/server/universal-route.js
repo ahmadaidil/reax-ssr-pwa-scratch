@@ -21,9 +21,11 @@ router.get('*', (req, res) => {
   );
 
   const { helmet } = helmetContext;
+  const isProduction = process.env.NODE_ENV === 'production';
   res.render('index', {
     helmet,
-    reax
+    reax,
+    isProduction
   });
 });
 

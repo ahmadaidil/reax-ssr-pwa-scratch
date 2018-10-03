@@ -7,6 +7,8 @@ html(lang="en")&attributes(helmet.htmlAttributes.toString())
     !=helmet.meta.toString()
     !=helmet.title.toString()
     !=helmet.link.toString()
+    if(isProduction)
+      link(rel="stylesheet", type="text/css", href="/assets/main.css")
   body&attributes(helmet.bodyAttributes.toString())
     #reax!=reax || 'reax'
     script(type="text/javascript" src="/assets/reax.js")
