@@ -8,7 +8,7 @@
   "scripts": {
     "start": "concurrently --kill-others \"npm run start:proxy\" \"npm run start:dev\"",
     "start:dev": "webpack-dev-server --open",
-    "start:proxy": "nodemon src/server --exec babel-node --presets @babel/env,@babel/react",
+    "start:proxy": "nodemon src/server --exec babel-node",
     "start:prod": "npm run build && npm run start:prod-server",
     "start:prod-server": "NODE_ENV=production node dist/server",
     "build": "NODE_ENV=production webpack && rm -rf dist/ && babel src/ -d dist/ && cp -a src/server/views dist/server/"
@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "babel-plugin-inline-import-data-uri": "^1.0.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "css-loader": "^1.0.0",
@@ -35,6 +36,7 @@
     "react-router-dom": "^4.3.1",
     "style-loader": "^0.23.0",
     "terser-webpack-plugin": "^1.1.0",
+    "url-loader": "^1.1.1",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-merge": "^4.1.4"
