@@ -1,6 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserJsPlugin = require('terser-webpack-plugin');
 const baseConfig = require('./webpack.base');
 
 const prodConfig = {
@@ -15,7 +15,7 @@ const prodConfig = {
   },
   devtool: false,
   optimization: {
-    minimizer: [new UglifyJsPlugin()]
+    minimizer: [new TerserJsPlugin()]
   }
 };
 
